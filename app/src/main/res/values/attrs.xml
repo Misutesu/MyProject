@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ProgressBar">
+        <attr name="stroke_width" format="dimension" />
+        <attr name="progress_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="OldWaveView">
+        <attr name="wave_peak_num" format="integer" />
+        <attr name="wave_peak_color" format="color" />
+        <attr name="wave_move_speed" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="WaveView">
+
+    </declare-styleable>
+</resources>
