@@ -15,4 +15,25 @@
     <declare-styleable name="WaveView">
 
     </declare-styleable>
+
+    <declare-styleable name="FormView">
+        <attr name="coordinate_line_color" format="color" />
+        <attr name="coordinate_text_color" format="color" />
+        <attr name="coordinate_text_size" format="dimension" />
+        <attr name="coordinate_name_text_size" format="dimension" />
+        <attr name="peak_line_color" format="color" />
+        <attr name="peak_line_width" format="dimension" />
+        <attr name="point_line_color" format="color" />
+        <attr name="shape_start_color" format="color" />
+        <attr name="shape_end_color" format="color" />
+        <attr name="shape_color" format="color" />
+        <attr name="circle_normal_color" format="color" />
+        <attr name="circle_error_color" format="color" />
+        <attr name="circle_stroke_color" format="color" />
+        <attr name="circle_radius" format="dimension" />
+        <attr name="circle_width" format="dimension" />
+        <attr name="limit_line_color" format="color" />
+        <attr name="auto_judge_error" format="boolean" />
+        <attr name="is_enable_xml_preview" format="boolean" />
+    </declare-styleable>
 </resources>

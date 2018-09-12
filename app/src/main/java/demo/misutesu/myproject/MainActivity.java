@@ -4,18 +4,21 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
+import demo.misutesu.myproject.lifecycle.ActivityLifeObserver;
 import demo.misutesu.myproject.newwaveview.Wave;
 import demo.misutesu.myproject.newwaveview.WaveView;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    WaveView waveView;
+    private WaveView waveView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getLifecycle().addObserver(new ActivityLifeObserver());
 
         waveView = findViewById(R.id.wave_view);
 

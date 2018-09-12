@@ -88,9 +88,7 @@ public class LocationUtils {
         if (mLocationManager == null
                 || (!mLocationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
                 && !mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))) {
-            if (listener != null) {
-                listener.getLocationError();
-            }
+            listener.getLocationError();
             Log.d("LocationUtils", "无法定位，请打开定位服务");
             return false;
         }
