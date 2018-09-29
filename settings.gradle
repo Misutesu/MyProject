@@ -1,1 +1,1 @@
-include ':app', ':tbsdoc', ':X5WebDemo'
+include ':app', ':tbsdoc', ':X5WebDemo', ':ijkplayer'

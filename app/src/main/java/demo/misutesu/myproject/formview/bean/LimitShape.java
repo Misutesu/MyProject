@@ -2,6 +2,7 @@ package demo.misutesu.myproject.formview.bean;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.support.annotation.ColorInt;
 import android.support.annotation.FloatRange;
 
@@ -17,9 +18,11 @@ public class LimitShape {
     private boolean isErrorToTop = true;
 
     private Paint paint = new Paint();
+    private Path path = new Path();
 
-    public  LimitShape() {
+    public LimitShape() {
         paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.FILL);
     }
 
     public void init(Coordinate coordinate) {
@@ -68,7 +71,16 @@ public class LimitShape {
                 canvas.drawLine(startX, y, startX + width, y, paint);
             } else {
                 float toY = y - ((minY - maxY) * occupyPercent);
-                canvas.drawRect(startX, y, startX + width, toY, paint);
+
+                path.reset();
+                path.moveTo(startX, y);
+                path.lineTo(startX, toY);
+                path.lineTo(startX + width, toY);
+                path.lineTo(startX + width, y);
+                path.lineTo(startX, y);
+                path.close();
+
+                canvas.drawPath(path, paint);
             }
         }
     }

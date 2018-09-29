@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <declare-styleable name="ProgressBar">
         <attr name="stroke_width" format="dimension" />
         <attr name="progress_color" format="color" />
@@ -35,5 +34,13 @@
         <attr name="limit_line_color" format="color" />
         <attr name="auto_judge_error" format="boolean" />
         <attr name="is_enable_xml_preview" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarView">
+        <attr name="day_text_size" format="dimension" />
+        <attr name="text_color_enable" format="color" />
+        <attr name="text_color_unable" format="color" />
+        <attr name="can_select_after_not" format="boolean" />
+        <attr name="is_enable_xml_preview_temp" format="boolean" />
     </declare-styleable>
 </resources>

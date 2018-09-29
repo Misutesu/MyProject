@@ -3,28 +3,34 @@ package demo.misutesu.myproject;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
-import demo.misutesu.myproject.formview.FormView;
+import demo.misutesu.myproject.calendarview.CalendarView;
 
 public class FormActivity extends AppCompatActivity {
 
-    private FormView formView;
+//    private FormView formView;
+
+    private CalendarView calendarView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
 
-        formView = findViewById(R.id.form_view);
+        calendarView = findViewById(R.id.calendar_view);
 
-        formView.setOnFormClickListener(new FormView.OnFormClickListener() {
-            @Override
-            public void onPointClick(float x, float y, int position) {
-                Log.d("TAG", "position : " + position);
-            }
-        });
+        calendarView.setCanSelectAfterNow(false)
+                .showWithSelect(2018, 8, 15, 2018, 9, 10);
 
+//        formView = findViewById(R.id.form_view);
+//
+//        formView.setOnFormClickListener(new FormView.OnFormClickListener() {
+//            @Override
+//            public void onPointClick(float x, float y, int position) {
+//                Log.d("TAG", "position : " + position);
+//            }
+//        });
+//
 //        formView.setCoordinateName("(小时)", "(℃)")
 //                .clearYPoint()
 //                .addYPoint(0.3f, "10")

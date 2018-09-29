@@ -197,11 +197,6 @@ public class XPoints {
             float endX = minX + ((maxX - minX) * ((float) position / xPoints.size()));
             float endY = this.startY - (xPoint.percent * height);
 
-            circlePaint.setStyle(Paint.Style.FILL_AND_STROKE);
-            circlePaint.setColor(circleStrokeColor);
-
-            canvas.drawCircle(endX, endY, circleRadius, circlePaint);
-
             circlePaint.setStyle(Paint.Style.FILL);
             int circleColor;
             if (isAutoJudgeError) {
@@ -214,6 +209,11 @@ public class XPoints {
                 circleColor = xPoint.isError ? circleErrorColor : circleNormalColor;
             }
             circlePaint.setColor(circleColor);
+            canvas.drawCircle(endX, endY, circleRadius, circlePaint);
+
+            circlePaint.setStyle(Paint.Style.STROKE);
+            circlePaint.setColor(circleStrokeColor);
+
             canvas.drawCircle(endX, endY, circleRadius, circlePaint);
         }
     }

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#001b71">
+
+    <View
+        android:id="@+id/view_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/view_right"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/view_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sure"
+        app:layout_constraintLeft_toRightOf="@+id/view_left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_left_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/view_left"
+        app:layout_constraintRight_toRightOf="@+id/view_left"
+        app:layout_constraintTop_toTopOf="@+id/view_left">
+
+        <Button
+            android:id="@+id/btn_left_year_last"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_left_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            tools:text="2018年" />
+
+        <Button
+            android:id="@+id/btn_left_year_next"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_left_month_last"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_left_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            tools:text="8月" />
+
+        <Button
+            android:id="@+id/btn_left_month_next"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_right_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/view_right"
+        app:layout_constraintRight_toRightOf="@+id/view_right"
+        app:layout_constraintTop_toTopOf="@+id/view_right">
+
+        <Button
+            android:id="@+id/btn_right_year_last"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_right_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            tools:text="2018" />
+
+        <Button
+            android:id="@+id/btn_right_year_next"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_right_month_last"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_right_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            tools:text="2018" />
+
+        <Button
+            android:id="@+id/btn_right_month_next"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_left"
+        app:layout_constraintLeft_toLeftOf="@+id/view_left"
+        app:layout_constraintRight_toRightOf="@+id/view_left"
+        app:layout_constraintTop_toBottomOf="@+id/ll_left_select" />
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_right"
+        app:layout_constraintLeft_toLeftOf="@+id/view_right"
+        app:layout_constraintRight_toRightOf="@+id/view_right"
+        app:layout_constraintTop_toBottomOf="@+id/ll_right_select" />
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

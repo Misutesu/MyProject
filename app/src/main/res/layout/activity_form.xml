@@ -19,4 +19,10 @@
         app:point_line_color="#6f9bff"
         app:shape_end_color="#236efe"
         app:shape_start_color="#fa7dd6" />
+
+    <demo.misutesu.myproject.calendarview.CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="600dp"
+        android:layout_height="360dp"
+        android:layout_gravity="center" />
 </FrameLayout>
